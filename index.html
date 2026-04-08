@@ -342,30 +342,28 @@ src="https://www.facebook.com/tr?id=2183752915712452&ev=PageView&noscript=1"
         // Initialize first question
         updateQuiz();
     </script>
-</body
-    <script>
-  const link = https:'https://pay.cakto.com.br/dkf9rvk_823087?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
+    (function() {
+        const link = 'https://pay.cakto.com.br/dkf9rvk_823087?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
 
-  function setBackRedirect(url) {
-    let urlBackRedirect = url;
-    urlBackRedirect = urlBackRedirect =
-      urlBackRedirect.trim() +
-      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-      document.location.search.replace('?', '').toString();
+        function setBackRedirect(url) {
+          let urlBackRedirect = url + (url.indexOf('?') > 0 ? '&' : '?') + document.location.search.replace('?', '').toString();
 
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
+          history.pushState({}, '', location.href);
+          history.pushState({}, '', location.href);
+          history.pushState({}, '', location.href);
 
-    window.addEventListener('popstate', () => {
-      console.log('onpopstate', urlBackRedirect);
-      setTimeout(() => {
-        location.href = urlBackRedirect;
-      }, 1);
-    });
-  }
+          window.addEventListener('popstate', () => {
+            setTimeout(() => {
+              location.href = urlBackRedirect;
+            }, 1);
+          });
+        }
 
-  setBackRedirect(link);'https://pay.cakto.com.br/dkf9rvk_823087?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=';
+        setBackRedirect(link);
+      })();
+    </script>
+    </body>
+    
 </script>
 
 </html>
